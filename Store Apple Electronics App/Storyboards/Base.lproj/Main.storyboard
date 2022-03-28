@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,12 +19,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qs5-eq-vVq">
                                 <rect key="frame" x="40" y="218" width="240" height="132"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLM-10-8HU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLM-10-8HU">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-aX-7cd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-aX-7cd">
                                         <rect key="frame" x="0.0" y="49" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -33,6 +33,9 @@
                                         <rect key="frame" x="0.0" y="98" width="240" height="34"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mq-Tf-sQY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -46,17 +49,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="k9Z-h1-xGR" kind="presentation" modalPresentationStyle="fullScreen" id="ecZ-go-ffB"/>
+                        <outlet property="loginButton" destination="Rli-qK-lKs" id="PBq-MY-cMF"/>
+                        <outlet property="nameTextField" destination="bLM-10-8HU" id="Oqb-yK-0GQ"/>
+                        <outlet property="surnameTextField" destination="5H7-aX-7cd" id="hrp-iM-YHM"/>
+                        <segue destination="k9Z-h1-xGR" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="ecZ-go-ffB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="68"/>
         </scene>
-        <!--Item-->
+        <!--Catalog-->
         <scene sceneID="qyA-cw-RdT">
             <objects>
-                <viewController id="ZlC-I2-fpf" sceneMemberID="viewController">
+                <viewController id="ZlC-I2-fpf" customClass="CatalogViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TlG-oW-7bF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,6 +125,9 @@
                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Подробнее &gt;"/>
+                                                        <connections>
+                                                            <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="i8X-TX-xxL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -160,6 +169,9 @@
                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Подробнее &gt;"/>
+                                                        <connections>
+                                                            <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="Mfh-HJ-HVj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -201,6 +213,9 @@
                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Подробнее &gt;"/>
+                                                        <connections>
+                                                            <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="gdk-zL-s6y"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -212,9 +227,15 @@
                         <viewLayoutGuide key="safeArea" id="hnr-Qy-RHb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="oXL-iG-1FA"/>
+                    <tabBarItem key="tabBarItem" title="Catalog" image="tray.full" catalog="system" id="oXL-iG-1FA"/>
                     <navigationItem key="navigationItem" id="b1d-We-zgn"/>
                     <connections>
+                        <outlet property="notebookImageView" destination="vcM-ee-UYX" id="uhv-PT-jQj"/>
+                        <outlet property="notebookPriceLabel" destination="lY5-j0-sNS" id="Tjf-fP-rd1"/>
+                        <outlet property="phoneImageView" destination="qlh-L0-E77" id="VGb-We-zKk"/>
+                        <outlet property="phonePriceLabel" destination="E5f-6o-XCO" id="L1c-C5-bP8"/>
+                        <outlet property="tabletImageView" destination="S4L-Md-i71" id="J33-m5-0uq"/>
+                        <outlet property="tabletPriceLabel" destination="Cbc-Yo-7uC" id="EwW-cm-R2v"/>
                         <segue destination="LGt-R5-jRb" kind="show" identifier="CatalogSegue" id="thC-dr-1ZL"/>
                     </connections>
                 </viewController>
@@ -222,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="3278" y="-754"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Devices Table View Controller-->
         <scene sceneID="yTM-29-wZn">
             <objects>
-                <tableViewController id="LGt-R5-jRb" sceneMemberID="viewController">
+                <tableViewController id="LGt-R5-jRb" customClass="DevicesTableViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fZD-Ym-1JK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="4059" y="-754"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="mpQ-2m-QRQ">
             <objects>
-                <viewController id="DDu-B0-k9e" sceneMemberID="viewController">
+                <viewController id="DDu-B0-k9e" customClass="DetailViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eXP-LD-R4F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +315,9 @@
                                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Купить"/>
+                                                <connections>
+                                                    <action selector="buyButtonPressed:" destination="DDu-B0-k9e" eventType="touchUpInside" id="i2j-lh-bvP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -315,6 +339,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nby-MC-4Dm"/>
+                    <connections>
+                        <outlet property="aboutDevice" destination="9xx-1z-qxP" id="osC-hV-zLR"/>
+                        <outlet property="buyButton" destination="k9J-f6-dOr" id="uUW-8Y-mgk"/>
+                        <outlet property="detailImageView" destination="BJn-7V-gIf" id="mcf-GL-eYo"/>
+                        <outlet property="deviceNameLabel" destination="qoK-Zw-O13" id="erq-eT-MG0"/>
+                        <outlet property="priceLabel" destination="EKo-UF-bPZ" id="3TR-sg-ZP7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccf-dp-kvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,16 +390,16 @@
             </objects>
             <point key="canvasLocation" x="2220" y="67.605633802816897"/>
         </scene>
-        <!--Item-->
+        <!--Cart-->
         <scene sceneID="0em-ca-ytj">
             <objects>
-                <tableViewController id="PHq-wF-8lq" sceneMemberID="viewController">
+                <tableViewController id="PHq-wF-8lq" customClass="CartTableViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CA6-wj-Zxd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5hc-MA-Jxx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" id="5hc-MA-Jxx">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hc-MA-Jxx" id="eW6-bF-Phh">
@@ -382,16 +413,16 @@
                             <outlet property="delegate" destination="PHq-wF-8lq" id="4yW-O3-0A2"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="PFU-e6-geY"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart" catalog="system" id="PFU-e6-geY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsJ-6p-0IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3278" y="68"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="Wcv-9d-0Xm">
             <objects>
-                <viewController id="ynw-jt-Jwo" sceneMemberID="viewController">
+                <viewController id="ynw-jt-Jwo" customClass="ProfileViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pSg-53-X69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,11 +434,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="About Us"/>
+                                        <connections>
+                                            <segue destination="Yeh-i6-FCl" kind="show" id="QG1-BP-Qd6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJN-qt-uO7">
                                         <rect key="frame" x="0.0" y="38" width="64" height="30"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="logOut"/>
+                                        <connections>
+                                            <segue destination="nun-aX-V8m" kind="unwind" unwindAction="unwindFor:" id="sEh-Bw-tfW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -433,6 +470,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="birthDayButtonPressed" destination="ynw-jt-Jwo" eventType="touchUpInside" id="ofP-jk-I1k"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -447,16 +487,22 @@
                             <constraint firstItem="67E-wg-CGJ" firstAttribute="centerX" secondItem="pSg-53-X69" secondAttribute="centerX" id="fPt-F6-vTj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Lo4-wf-bCr"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Lo4-wf-bCr"/>
+                    <connections>
+                        <outlet property="birthdayButton" destination="Xlb-r2-TBU" id="R96-h7-Mdk"/>
+                        <outlet property="fullNameLabel" destination="1vR-Xi-o7B" id="ZsD-N8-szI"/>
+                        <outlet property="profileImageView" destination="1Mi-tG-yuX" id="HNJ-qr-ZFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33U-Qj-TUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="nun-aX-V8m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3278" y="855"/>
         </scene>
-        <!--View Controller-->
+        <!--About Us View Controller-->
         <scene sceneID="aeO-By-zid">
             <objects>
-                <viewController id="Yeh-i6-FCl" sceneMemberID="viewController">
+                <viewController id="Yeh-i6-FCl" customClass="AboutUsViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSy-Ah-XSx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,6 +540,13 @@
                         <viewLayoutGuide key="safeArea" id="iO6-Uk-PXD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6UP-7r-lR2"/>
+                    <connections>
+                        <outlet property="personFour" destination="dIF-YL-OsL" id="mYb-Rh-i3r"/>
+                        <outlet property="personOne" destination="ihJ-Bj-xW2" id="X2u-6X-i25"/>
+                        <outlet property="personThree" destination="W6x-fD-2PM" id="gyK-VN-RfQ"/>
+                        <outlet property="personTwo" destination="UFS-rj-IsI" id="Iy2-3y-aij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJl-vA-NQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,6 +554,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="tray.full" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
