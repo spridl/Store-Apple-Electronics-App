@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.delegate = self // проверить
-        surnameTextField.delegate = self // проверить
+//        nameTextField.delegate = self // проверить
+//        surnameTextField.delegate = self // проверить
 
     }
     
