@@ -67,8 +67,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="3pk-15-O4V">
-                                <rect key="frame" x="28" y="76" width="264" height="415.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="3pk-15-O4V">
+                                <rect key="frame" x="28" y="76.5" width="264" height="415.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="X1l-qe-OUp" userLabel="Image Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="415.5"/>
@@ -226,6 +226,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hnr-Qy-RHb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3pk-15-O4V" firstAttribute="centerY" secondItem="TlG-oW-7bF" secondAttribute="centerY" id="WqQ-d2-tuc"/>
+                            <constraint firstItem="3pk-15-O4V" firstAttribute="leading" secondItem="hnr-Qy-RHb" secondAttribute="leading" constant="28" id="ZAB-VU-Exk"/>
+                            <constraint firstItem="hnr-Qy-RHb" firstAttribute="trailing" secondItem="3pk-15-O4V" secondAttribute="trailing" constant="28" id="w6l-c3-r3O"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Catalog" image="tray.full" catalog="system" id="oXL-iG-1FA"/>
                     <navigationItem key="navigationItem" id="b1d-We-zgn"/>
@@ -377,6 +382,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6Gd-SR-kR4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VsC-ip-HOq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -507,8 +513,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="yjh-L4-Ihy">
-                                <rect key="frame" x="116" y="202" width="87.5" height="163"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="yjh-L4-Ihy">
+                                <rect key="frame" x="116.5" y="202.5" width="87.5" height="163"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="участник 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihJ-Bj-xW2">
                                         <rect key="frame" x="0.0" y="0.0" width="87.5" height="20.5"/>
@@ -539,6 +545,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iO6-Uk-PXD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yjh-L4-Ihy" firstAttribute="centerY" secondItem="bSy-Ah-XSx" secondAttribute="centerY" id="h96-ZH-d3Q"/>
+                            <constraint firstItem="yjh-L4-Ihy" firstAttribute="centerX" secondItem="bSy-Ah-XSx" secondAttribute="centerX" id="qG0-QE-9UW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6UP-7r-lR2"/>
                     <connections>
