@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // new text for test # 4
+        // new text for test # 6
 //        nameTextField.delegate = self // проверить
 //        surnameTextField.delegate = self // проверить
 
