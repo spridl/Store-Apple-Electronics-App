@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Divice {
+struct Device {
     
     let name: String
     let price: Int
     let descriptio: String
     let image: String
     
-    static func getIphone() -> [Divice] {
+    static func getIphone() -> [Device] {
         
-        var divices: [Divice] = []
+        var devices: [Device] = []
         
         let iphones = DataManager.shared.iPhone
         let priceForIphones = DataManager.shared.priceForIphones
@@ -31,76 +31,48 @@ struct Divice {
         )
         
         for index in 0..<iterationCount {
-            let divice = Divice(
+            let device = Device(
                 name: iphones[index],
                 price: priceForIphones[index],
                 descriptio: descriptionOfIphones[index],
                 image:iphoneImages[index]
             )
-            divices.append(divice)
+            devices.append(device)
         }
-        return divices
+        return devices
     }
     
-    static func getIpad() -> [Divice] {
+    static func getIpad() -> [Device] {
         
-        var divices: [Divice] = []
+        var devices: [Device] = []
         
         let ipads = DataManager.shared.iPad
         let priceForIpads = DataManager.shared.priceForIpads
-        let descriptioOfIpads = DataManager.shared.descriptionOfIpads
+        let descriptionOfIpads = DataManager.shared.descriptionOfIpads
         let ipadImages = DataManager.shared.ipadImages
         
         let iterationCount = min(
             ipads.count,
             priceForIpads.count,
-            descriptioOfIpads.count,
+            descriptionOfIpads.count,
             ipadImages.count
         )
         
         for index in 0..<iterationCount {
-            let divice = Divice(
+            let device = Device(
                 name: ipads[index],
                 price: priceForIpads[index],
-                descriptio: descriptioOfIpads[index],
+                descriptio: descriptionOfIpads[index],
                 image: ipadImages[index]
             )
-            divices.append(divice)
+            devices.append(device)
         }
-        return divices
+        return devices
     }
     
-    static func getWatch() -> [Divice] {
+    static func getMacBook() -> [Device] {
         
-        var divices: [Divice] = []
-        
-        let appleWatchs = DataManager.shared.appleWatch
-        let priceForWatchs = DataManager.shared.priceForWatchs
-        let descriptioOfWatchs = DataManager.shared.descriptionOfWatchs
-        let watchImages = DataManager.shared.watchImages
-        
-        let iterationCount = min(
-            appleWatchs.count,
-            priceForWatchs.count,
-            descriptioOfWatchs.count,
-            watchImages.count
-        )
-        
-        for index in 0..<iterationCount {
-            let divice = Divice(
-                name: appleWatchs[index],
-                price: priceForWatchs[index],
-                descriptio: descriptioOfWatchs[index],
-                image: watchImages[index]
-            )
-            divices.append(divice)
-        }
-        return divices
-    }
-    
-    static func getMacBooc() -> [Divice] {
-        
-        var divices: [Divice] = []
+        var devices: [Device] = []
         
         let macBooks = DataManager.shared.macBook
         let priceForMacBooks = DataManager.shared.priceForMacBooks
@@ -115,14 +87,14 @@ struct Divice {
         )
         
         for index in 0..<iterationCount {
-            let divice = Divice(
+            let device = Device(
                 name: macBooks[index],
                 price: priceForMacBooks[index],
                 descriptio: descriptionOfMacBooks[index],
                 image: macBookImages[index]
             )
-            divices.append(divice)
+            devices.append(device)
         }
-        return divices
+        return devices
     }
 }
