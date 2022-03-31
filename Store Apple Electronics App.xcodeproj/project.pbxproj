@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48575A9227F5E29A00C7DDBD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48575A9127F5E29A00C7DDBD /* DataManager.swift */; };
+		9510779527F61F6D000E8421 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9510779427F61F6D000E8421 /* CartManager.swift */; };
 		959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF2E27F251C700B1B07E /* AppDelegate.swift */; };
 		959CFF3127F251C700B1B07E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF3027F251C700B1B07E /* SceneDelegate.swift */; };
 		959CFF3627F251C700B1B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959CFF3427F251C700B1B07E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		48575A9127F5E29A00C7DDBD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9510779427F61F6D000E8421 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		959CFF2B27F251C700B1B07E /* Store Apple Electronics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Store Apple Electronics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959CFF2E27F251C700B1B07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959CFF3027F251C700B1B07E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				48575A9127F5E29A00C7DDBD /* DataManager.swift */,
+				9510779427F61F6D000E8421 /* CartManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				959CFF5327F25C2D00B1B07E /* Person.swift in Sources */,
 				959CFF4527F25B7F00B1B07E /* DetailViewController.swift in Sources */,
 				959CFF4927F25BAF00B1B07E /* ProfileViewController.swift in Sources */,
+				9510779527F61F6D000E8421 /* CartManager.swift in Sources */,
 				959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */,
 				959CFF4D27F25BFE00B1B07E /* CartTableViewController.swift in Sources */,
 				48575A9227F5E29A00C7DDBD /* DataManager.swift in Sources */,

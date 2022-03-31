@@ -8,6 +8,8 @@
 import UIKit
 
 class DevicesTableViewController: UITableViewController {
+    
+    var devices: [Device]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
