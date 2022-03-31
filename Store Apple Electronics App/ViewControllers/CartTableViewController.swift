@@ -8,76 +8,85 @@
 import UIKit
 
 class CartTableViewController: UITableViewController {
+    
+    var cart = CartManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setNavigationItem()
     }
 
     // MARK: - Table view data source
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
+       cart.devices.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "\(indexPath.row)"
+        let size = view.frame.height / 10
+        
+        content.text = cart.devices[indexPath.row].name
+        content.secondaryText = "Стоимость \(cart.devices[indexPath.row].price)"
+        content.image = UIImage(named: cart.devices[indexPath.row].image)
+        content.imageProperties.maximumSize = CGSize(width: size, height: size)
+        
         cell.contentConfiguration = content
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            cart.devices.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    private func setNavigationItem() {
+        let barItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(setBuyAlert))
+        let navigationItem = UINavigationItem(title: "Корзина")
+        navigationItem.rightBarButtonItem = barItem
+        navigationController?.navigationBar.setItems([navigationItem], animated: false)
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+}
+
+extension CartTableViewController {
+    @objc private func setBuyAlert() {
+        var sum = 0
+        
+        for device in cart.devices {
+            sum += device.price
+        }
+        
+        let alert = UIAlertController(
+            title: "Оформить доставку?",
+            message: "на сумму \(sum)",
+            preferredStyle: .alert)
+        let actionYes = UIAlertAction(title: "Да", style: .default) {  _ in
+            self.cart.devices = []
+            self.doneAlert()
+            self.tableView.reloadData()
+        }
+        let actionNo = UIAlertAction(title: "Нет", style: .default)
+        
+        alert.addAction(actionYes)
+        alert.addAction(actionNo)
+        
+        present(alert, animated: true)
+        
+        
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func doneAlert() {
+        let alert = UIAlertController(
+            title: "Поздравляем!!!",
+            message: "Ваш заказ ожидает вас в под дверью",
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
-    */
-
 }
