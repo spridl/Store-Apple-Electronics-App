@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate {
-    func setPerson(for name: String, and surname: String)
-}
 
 class ProfileViewController: UIViewController {
 
@@ -18,20 +15,19 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var birthdayButton: UIButton!
     
+    var fullName: String!
+//    var Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fullNameLabel.text = fullName
+        
+//        profileImageView.image = UIImage(named: person.title)
+
     }
     
     @IBAction func birthDayButtonPressed() {
     }
-
 }
 
-// MARK: - LoginViewControllerDelegate
-extension ProfileViewController: LoginViewControllerDelegate {
-    func setPerson(for name: String, and surname: String) {
-        fullNameLabel.text = "\(name) \(surname)"
-    }
-    
-    
-}

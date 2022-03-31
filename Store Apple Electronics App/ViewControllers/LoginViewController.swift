@@ -8,55 +8,68 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    // MARK: - IB Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
-    var delegate: LoginViewControllerDelegate!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // new text for test # 6
-//        nameTextField.delegate = self // проверить
-//        surnameTextField.delegate = self // проверить
 
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationController = segue.destination as?
+                UINavigationController else { return }
+        guard let tabBarController = navigationController.topViewController as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        let fullName = "\(nameTextField.text ?? "") \(surnameTextField.text ?? "")"
+        
+        viewControllers.forEach {
+            if let profileVC = $0 as? ProfileViewController {
+                profileVC.fullName = fullName
+            } else { return }
+        }
     }
-    
-    @IBAction func loginButtonPressed() {
-//        guard nameTextField.text == проверка на правильный ввод данных else {
-//            showAlert(
-//                title: "Invalid name",
-//                message: "Please, enter correct name",
-//                textField: nameTextField
-//            )
-//            return
-//        }
-//
-//        guard surnameTextField.text == проверка на правильный ввод данных else {
-//            showAlert(
-//                title: "Invalid surname",
-//                message: "Please, enter correct surname",
-//                textField: surNnmeTextField
-//            )
-//            return
-//        }
-        delegate?.setPerson(for: nameTextField.text ?? "", and: surnameTextField.text ?? "")
 
+    // MARK: - IBActions
+    @IBAction func loginButtonPressed() {
+        guard nameTextField.text != nil && nameTextField.text != "" else {
+            showAlert(
+                title: "Invalid name",
+                message: "Please, enter correct name",
+                textField: nameTextField
+            )
+            return
+        }
+       
+        guard surnameTextField.text != nil && surnameTextField.text != "" else {
+            showAlert(
+                title: "Invalid surname",
+                message: "Please, enter correct surname",
+                textField: surnameTextField
+            )
+            return
+        }
+        
         performSegue(withIdentifier: "loginSegue", sender: nil)
-            // some new code
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        nameTextField.text = ""
+        surnameTextField.text = ""
     }
 }
 
 // MARK: - Alert Controller
 extension LoginViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    private func showAlert(title: String,
+                           message: String,
+                           textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField?.text = ""
+            textField?.becomeFirstResponder()
         }
         alert.addAction(okAction)
         present(alert, animated: true)
@@ -78,7 +91,13 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-}
-
     
-   
+    func textField(_ TextField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String)
+    -> Bool {
+        let lettersCharacter = CharacterSet.letters
+        let characterSet = CharacterSet(charactersIn: string)
+        return lettersCharacter.isSuperset(of: characterSet)
+    }
+}
