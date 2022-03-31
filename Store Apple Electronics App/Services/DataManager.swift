@@ -41,24 +41,24 @@ class DataManager {
         "MacBook Pro (14 дюймов, 2021 г.)",
     ]
     
-    let priceForIphones = [22, 44, 66, 66, 66, 33]
-    let priceForIpads = [22, 44, 66, 66]
-    let priceForWatchs = [22, 44, 66, 66]
-    let priceForMacBooks = [22, 44, 66, 66, 66]
+    let priceForIphones = [599, 699, 799, 899, 1099, 1199]
+    let priceForIpads = [299, 399, 599, 499]
+    let priceForWatchs = [299, 299, 626, 626]
+    let priceForMacBooks = [1599, 1899, 2099, 2599, 2999]
     
     let iphoneImages = [
         "iPhone 12",
         "iPhone 12 Pro",
         "iPhone 12 Pro Max",
-        "iPhone 13 Pro",
+        "iPhone 13",
         "iPhone 13 Pro",
         "iPhone 13 Pro Max"
     ]
     
     let ipadImages = [
-        "iPad Pro 12,9'' (третье поколение)",
-        "iPad Pro 11'' (второе поколение)",
-        "iPad Pro 12,9'' (третье поколение)",
+        "iPad Pro 12,9 (третье поколение)",
+        "iPad Pro 11 (второе поколение)",
+        "iPad Pro 12,9 (третье поколение)",
         "iPad Air 4"
     ]
     
