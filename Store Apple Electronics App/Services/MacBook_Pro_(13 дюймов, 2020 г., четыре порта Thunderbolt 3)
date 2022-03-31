@@ -2,30 +2,28 @@
 //  DataManager.swift
 //  Store Apple Electronics App
 //
-//  Created by Nasim Nozirov on 31.03.2022.
+//   Created by Nasim Nozirov on 28.03.2022.
 //
 
 import Foundation
 
 class DataManager {
-  
-  static let shared = DataManager()
+    
+    static let shared = DataManager()
     
     let iPhone = [
         "iPhone 12",
         "iPhone 12 Pro",
         "iPhone 12 Pro Max",
-        "iPhone 13 Pro",
+        "iPhone 13",
         "iPhone 13 Pro",
         "iPhone 13 Pro Max"
     ]
     
-    
-    
     let iPad = [
-        "iPad Pro 12,9'' (третье поколение)",
-        "iPad Pro 11'' (второе поколение)",
-        "iPad Pro 12,9'' (третье поколение)",
+        "iPad Pro 12,9(третье поколение)",
+        "iPad Pro 11(второе поколение)",
+        "iPad Pro 12,9(четвертое поколение)",
         "iPad Air 4"
     ]
     
@@ -35,7 +33,6 @@ class DataManager {
         "Apple Watch Series 7 - 41mm",
         "Apple Watch Series 7 - 45mm"
     ]
-    
     
     let macBook = [
         "MacBook Pro (13 дюймов, 2020 г., четыре порта Thunderbolt 3)",
@@ -64,7 +61,7 @@ class DataManager {
         "iPad Pro 11'' (второе поколение)",
         "iPad Pro 12,9'' (третье поколение)",
         "iPad Air 4"
-        ]
+    ]
     
     let watchImages = [
         "Watch Series 6 - 40mm",
@@ -88,7 +85,7 @@ class DataManager {
         Поддержка 5G
         Чип A14 Bionic
         Дисплей Super Retina XDR1:  6,1
-        Цвет: Фиолетовый
+        Цвет: Зелёный
         Память: 512 ГБ
         4‑ядерный графический процессор
         16‑ядерная система Neural Engine
@@ -144,7 +141,7 @@ class DataManager {
                                 Характеристика:
                                 Поддержка 5G
                                 Дисплей Super Retina XDR1:  6,1
-                                Цвет: Золотой
+                                Цвет: Белый
                                 Дисплей: Super Retina XDR
                                 Чип A15 Bionic
                                 Память:  1 т
@@ -230,6 +227,7 @@ class DataManager {
         """
     Apple Watch Series 6 - 40mm
     Характеристика:
+    Цвет: Серый космос
     Экран: AMOLED, 1,78″, 368×448 (326 ppi), с функцией AlwaysOn
     Материал корпуса: титан
     SoC (CPU): Apple S6, 2 ядра
@@ -240,6 +238,7 @@ class DataManager {
         """
         Apple Watch Series 6 - 44mm
         Характеристика:
+        Цвет: Черный
         Экран: AMOLED, 1,78″, 368×448 (326 ppi), с функцией AlwaysOn
         Материал корпуса: титан
         SoC (CPU): Apple S6, 2 ядра
@@ -250,6 +249,7 @@ class DataManager {
         """
             Apple Watch Series 7 - 41mm
             Характеристика:
+            Цвет: Белый
             Экран: LTPO OLED, 1,69″, 352×430 (326 ppi), с функцией AlwaysOn
             Материал корпуса: титан
             SoC (CPU): Apple S7, 2 ядра
@@ -260,6 +260,7 @@ class DataManager {
         """
                "Apple Watch Series 7 - 45mm"
                 Характеристика:
+                Цвет: Красный
                 Экран: LTPO OLED, 1,9″, 396×484 (326 ppi), с функцией AlwaysOn
                 Материал корпуса: титан
                 SoC (CPU): Apple S7, 2 ядра
@@ -269,12 +270,11 @@ class DataManager {
     """
     ]
     
-    
     let descriptionOfMacBooks = [
     """
     MacBook Pro (13 дюймов, 2020 г., четыре порта Thunderbolt 3)
-        Технические характеристики:
-        Цвета: серебристый
+    Технические характеристики:
+    Цвета: серебристый
     Дисплей: Дисплей Retina
     Процессор: 2,0 ГГц, 4‑ядерный Intel Core i5 10‑го поколения
     Накопитель: SSD‑накопи­тель 1 ТБ
