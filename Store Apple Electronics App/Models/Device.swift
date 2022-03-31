@@ -105,13 +105,13 @@ struct Divice {
         let macBooks = DataManager.shared.macBook
         let priceForMacBooks = DataManager.shared.priceForMacBooks
         let descriptionOfMacBooks = DataManager.shared.descriptionOfMacBooks
-        let macBoocImages = DataManager.shared.macBookImages
+        let macBookImages = DataManager.shared.macBookImages
         
         let iterationCount = min(
             macBooks.count,
             priceForMacBooks.count,
             descriptionOfMacBooks.count,
-            macBoocImages.count
+            macBookImages.count
         )
         
         for index in 0..<iterationCount {
@@ -119,7 +119,7 @@ struct Divice {
                 name: macBooks[index],
                 price: priceForMacBooks[index],
                 descriptio: descriptionOfMacBooks[index],
-                image: macBoocImages[index]
+                image: macBookImages[index]
             )
             divices.append(divice)
         }

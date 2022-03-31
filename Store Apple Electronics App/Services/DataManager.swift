@@ -8,8 +8,8 @@
 import Foundation
 
 class DataManager {
-  
-  static let shared = DataManager()
+    
+    static let shared = DataManager()
     
     let iPhone = [
         "iPhone 12",
@@ -19,9 +19,6 @@ class DataManager {
         "iPhone 13 Pro",
         "iPhone 13 Pro Max"
     ]
-    
-    
-    
     let iPad = [
         "iPad Pro 12,9'' (третье поколение)",
         "iPad Pro 11'' (второе поколение)",
@@ -35,7 +32,6 @@ class DataManager {
         "Apple Watch Series 7 - 41mm",
         "Apple Watch Series 7 - 45mm"
     ]
-    
     
     let macBook = [
         "MacBook Pro (13 дюймов, 2020 г., четыре порта Thunderbolt 3)",
@@ -64,7 +60,7 @@ class DataManager {
         "iPad Pro 11'' (второе поколение)",
         "iPad Pro 12,9'' (третье поколение)",
         "iPad Air 4"
-        ]
+    ]
     
     let watchImages = [
         "Watch Series 6 - 40mm",
