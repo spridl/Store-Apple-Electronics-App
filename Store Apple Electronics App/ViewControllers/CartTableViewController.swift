@@ -44,9 +44,13 @@ class CartTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     private func setNavigationItem() {
         let barItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(setBuyAlert))
-        let navigationItem = UINavigationItem(title: "Корзина")
+        let navigationItem = UINavigationItem()
         navigationItem.rightBarButtonItem = barItem
         navigationController?.navigationBar.setItems([navigationItem], animated: false)
     }
