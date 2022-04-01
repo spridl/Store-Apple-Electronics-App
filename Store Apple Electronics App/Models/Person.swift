@@ -4,6 +4,7 @@
 //
 //  Created by Тимур on 29.03.2022.
 //
+
 struct Person {
     
     let name: String
@@ -16,3 +17,4 @@ struct Person {
     static func getPerson() {}
         
 }
+

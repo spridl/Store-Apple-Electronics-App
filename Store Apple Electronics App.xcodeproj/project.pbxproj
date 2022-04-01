@@ -114,6 +114,7 @@
 				959CFF4C27F25BFE00B1B07E /* CartTableViewController.swift */,
 				959CFF4E27F25C0800B1B07E /* DevicesTableViewController.swift */,
 				959CFF5027F25C2400B1B07E /* TabbarViewController.swift */,
+				5673746527F688EB008CD510 /* CollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +226,7 @@
 				959CFF5327F25C2D00B1B07E /* Person.swift in Sources */,
 				959CFF4527F25B7F00B1B07E /* DetailViewController.swift in Sources */,
 				959CFF4927F25BAF00B1B07E /* ProfileViewController.swift in Sources */,
+				5673746627F688EB008CD510 /* CollectionViewCell.swift in Sources */,
 				959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */,
 				959CFF4D27F25BFE00B1B07E /* CartTableViewController.swift in Sources */,
 				48575A9227F5E29A00C7DDBD /* DataManager.swift in Sources */,
