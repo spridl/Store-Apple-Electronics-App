@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5673746627F688EB008CD510 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673746527F688EB008CD510 /* CollectionViewCell.swift */; };
 		959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF2E27F251C700B1B07E /* AppDelegate.swift */; };
 		959CFF3127F251C700B1B07E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF3027F251C700B1B07E /* SceneDelegate.swift */; };
 		959CFF3627F251C700B1B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959CFF3427F251C700B1B07E /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5673746527F688EB008CD510 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		959CFF2B27F251C700B1B07E /* Store Apple Electronics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Store Apple Electronics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959CFF2E27F251C700B1B07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959CFF3027F251C700B1B07E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				959CFF4C27F25BFE00B1B07E /* CartTableViewController.swift */,
 				959CFF4E27F25C0800B1B07E /* DevicesTableViewController.swift */,
 				959CFF5027F25C2400B1B07E /* TabbarViewController.swift */,
+				5673746527F688EB008CD510 /* CollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				959CFF5327F25C2D00B1B07E /* Person.swift in Sources */,
 				959CFF4527F25B7F00B1B07E /* DetailViewController.swift in Sources */,
 				959CFF4927F25BAF00B1B07E /* ProfileViewController.swift in Sources */,
+				5673746627F688EB008CD510 /* CollectionViewCell.swift in Sources */,
 				959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */,
 				959CFF4D27F25BFE00B1B07E /* CartTableViewController.swift in Sources */,
 				959CFF3127F251C700B1B07E /* SceneDelegate.swift in Sources */,
