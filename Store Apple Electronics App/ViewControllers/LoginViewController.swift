@@ -13,19 +13,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: - Properties
+    
+    var person: Person!
 
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationController = segue.destination as?
-                UINavigationController else { return }
-        guard let tabBarController = navigationController.topViewController as? UITabBarController else { return }
+        
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
-        let fullName = "\(nameTextField.text ?? "") \(surnameTextField.text ?? "")"
+        guard let name = nameTextField.text, let surname = surnameTextField.text else { return }
+        
+        let person = Person(name: name, surname: surname)
         
         viewControllers.forEach {
             if let profileVC = $0 as? ProfileViewController {
-                profileVC.fullName = fullName
+                profileVC.fullName = person.fullName
             } else { return }
         }
     }
