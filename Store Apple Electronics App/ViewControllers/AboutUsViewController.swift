@@ -16,7 +16,7 @@ class AboutUsViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        let cell = collView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionCell
         cell.backgroundColor = .white
         cell.imgCell.layer.cornerRadius = cell.imgCell.frame.size.height / 2
 
