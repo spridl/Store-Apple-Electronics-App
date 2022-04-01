@@ -10,6 +10,7 @@
 		48575A9227F5E29A00C7DDBD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48575A9127F5E29A00C7DDBD /* DataManager.swift */; };
 		9591C52127F7838000D7304A /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591C52027F7838000D7304A /* CollectionCell.swift */; };
 		9591C52327F78BDC00D7304A /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591C52227F78BDC00D7304A /* CartManager.swift */; };
+		9591C52527F790BC00D7304A /* TeamData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591C52427F790BC00D7304A /* TeamData.swift */; };
 		959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF2E27F251C700B1B07E /* AppDelegate.swift */; };
 		959CFF3127F251C700B1B07E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959CFF3027F251C700B1B07E /* SceneDelegate.swift */; };
 		959CFF3627F251C700B1B07E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959CFF3427F251C700B1B07E /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		48575A9127F5E29A00C7DDBD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9591C52027F7838000D7304A /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		9591C52227F78BDC00D7304A /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		9591C52427F790BC00D7304A /* TeamData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamData.swift; sourceTree = "<group>"; };
 		959CFF2B27F251C700B1B07E /* Store Apple Electronics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Store Apple Electronics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		959CFF2E27F251C700B1B07E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959CFF3027F251C700B1B07E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				48575A9127F5E29A00C7DDBD /* DataManager.swift */,
+				9591C52427F790BC00D7304A /* TeamData.swift */,
 				9591C52227F78BDC00D7304A /* CartManager.swift */,
 			);
 			path = Services;
@@ -232,6 +235,7 @@
 				959CFF4527F25B7F00B1B07E /* DetailViewController.swift in Sources */,
 				959CFF4927F25BAF00B1B07E /* ProfileViewController.swift in Sources */,
 				959CFF2F27F251C700B1B07E /* AppDelegate.swift in Sources */,
+				9591C52527F790BC00D7304A /* TeamData.swift in Sources */,
 				9591C52327F78BDC00D7304A /* CartManager.swift in Sources */,
 				959CFF4D27F25BFE00B1B07E /* CartTableViewController.swift in Sources */,
 				9591C52127F7838000D7304A /* CollectionCell.swift in Sources */,

@@ -8,6 +8,9 @@
 import UIKit
 
 class CatalogViewController: UIViewController {
+    
+    //MARK: - IBOutlets
+    
     @IBOutlet weak var phoneImageView: UIImageView!
     @IBOutlet weak var tabletImageView: UIImageView!
     @IBOutlet weak var notebookImageView: UIImageView!
@@ -15,6 +18,8 @@ class CatalogViewController: UIViewController {
     @IBOutlet weak var phonePriceLabel: UILabel!
     @IBOutlet weak var tabletPriceLabel: UILabel!
     @IBOutlet weak var notebookPriceLabel: UILabel!
+    
+    //MARK: - Properties
     
     let iPhones = Device.getIphone()
     let iPads = Device.getIpad()
@@ -32,6 +37,8 @@ class CatalogViewController: UIViewController {
         addImage(to: notebookImageView, of: macbooks)
     }
     
+    //MARK: - IBActions
+    
     @IBAction func moreButtonPressed(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -43,10 +50,14 @@ class CatalogViewController: UIViewController {
         }
     }
     
+    //MARK: - Prepare for segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let devicesTVC = segue.destination as? DevicesTableViewController else { return }
         devicesTVC.devices = sender as? [Device]
     }
+    
+    //MARK: - private funcs
     
     private func addPrice(to label: UILabel, of devices: [Device]) {
         var prices = [Int]()

@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach {
             if let profileVC = $0 as? ProfileViewController {
-                profileVC.fullName = person.fullName
+                profileVC.person = person
             } else { return }
         }
     }

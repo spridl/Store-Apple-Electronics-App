@@ -11,17 +11,19 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     // MARK: - IB Outlets
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var birthdayButton: UIButton!
     
-    var fullName: String!
-//    var Person!
+    //MARK: - Properties
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullNameLabel.text = fullName
+        fullNameLabel.text = person.fullName
         
 //        profileImageView.image = UIImage(named: person.title)
 

@@ -58,6 +58,9 @@ class CartTableViewController: UITableViewController {
 }
 
 extension CartTableViewController {
+    
+    //MARK: - UIAlertController
+    
     private func setBuyAlert() {
         var sum = 0
         

@@ -14,7 +14,9 @@ struct Person {
         "\(name) \(surname)"
     }
     
-    static func getPerson() {}
+    static func getPerson() {
+        
+    }
         
 }
 
