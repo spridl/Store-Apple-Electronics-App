@@ -69,7 +69,7 @@ class CatalogViewController: UIViewController {
     }
     
     private func addImage(to imageView: UIImageView, of devices: [Device]) {
-        imageView.image = UIImage(named: devices.randomElement()?.image ?? "icloud.slash")
+        imageView.image = UIImage(named: devices.last?.image ?? "icloud.slash")
     }
 
 }
