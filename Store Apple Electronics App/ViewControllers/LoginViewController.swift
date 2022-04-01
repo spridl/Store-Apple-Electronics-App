@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         
         guard let name = nameTextField.text, let surname = surnameTextField.text else { return }
         
-        let person = Person(name: name, surname: surname)
+        let person = Person(name: name, surname: surname, photo: "no-avatar")
         
         viewControllers.forEach {
             if let profileVC = $0 as? ProfileViewController {
