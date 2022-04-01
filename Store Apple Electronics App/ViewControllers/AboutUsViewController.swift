@@ -19,11 +19,10 @@ class AboutUsViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        let teamPersons = Person.getPerson()
-        
         let cell = collView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionCell
         cell.backgroundColor = .white
         cell.imgCell.layer.cornerRadius = cell.imgCell.frame.size.height / 2
+        
         if indexPath.item == 0 {
             cell.lblCell.text = "TeamLid: \(teamPersons[indexPath.item].fullName). \n И его команда:"
         } else {
