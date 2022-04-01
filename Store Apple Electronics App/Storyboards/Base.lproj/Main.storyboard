@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="68"/>
         </scene>
-        <!--Catalog View Controller-->
+        <!--Catalog-->
         <scene sceneID="qyA-cw-RdT">
             <objects>
                 <viewController id="ZlC-I2-fpf" customClass="CatalogViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,7 +239,7 @@
                             <constraint firstItem="hnr-Qy-RHb" firstAttribute="trailing" secondItem="3pk-15-O4V" secondAttribute="trailing" constant="28" id="w6l-c3-r3O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b1d-We-zgn"/>
+                    <navigationItem key="navigationItem" title="Catalog" id="b1d-We-zgn"/>
                     <connections>
                         <outlet property="notebookImageView" destination="vcM-ee-UYX" id="uhv-PT-jQj"/>
                         <outlet property="notebookPriceLabel" destination="lY5-j0-sNS" id="Tjf-fP-rd1"/>
@@ -383,7 +383,7 @@
             </objects>
             <point key="canvasLocation" x="2220" y="67.605633802816897"/>
         </scene>
-        <!--Cart Table View Controller-->
+        <!--Cart-->
         <scene sceneID="0em-ca-ytj">
             <objects>
                 <tableViewController id="PHq-wF-8lq" customClass="CartTableViewController" customModule="Store_Apple_Electronics_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -406,7 +406,13 @@
                             <outlet property="delegate" destination="PHq-wF-8lq" id="4yW-O3-0A2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="tAh-E7-bvq"/>
+                    <navigationItem key="navigationItem" title="Cart" id="tAh-E7-bvq">
+                        <barButtonItem key="rightBarButtonItem" title="Buy" id="Kjk-xY-ha8">
+                            <connections>
+                                <action selector="buyButtonPressed:" destination="PHq-wF-8lq" id="Qpb-rq-snG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsJ-6p-0IO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
