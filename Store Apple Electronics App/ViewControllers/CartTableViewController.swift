@@ -11,11 +11,8 @@ class CartTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var cart = CartManager.shared
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    let cart = CartManager.shared
+    var devices: [Device]!
     
     //MARK: - IBActions
     
