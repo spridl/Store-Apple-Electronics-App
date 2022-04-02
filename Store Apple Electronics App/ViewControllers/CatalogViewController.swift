@@ -10,7 +10,7 @@ import UIKit
 class CatalogViewController: UIViewController {
     
     //MARK: - IBOutlets
-    
+
     @IBOutlet weak var phoneImageView: UIImageView!
     @IBOutlet weak var tabletImageView: UIImageView!
     @IBOutlet weak var notebookImageView: UIImageView!
