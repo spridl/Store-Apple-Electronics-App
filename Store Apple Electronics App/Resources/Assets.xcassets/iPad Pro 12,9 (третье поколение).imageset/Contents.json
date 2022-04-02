@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "ipad-pro-12-2018_2x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "ipad-pro-12-2018_2x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

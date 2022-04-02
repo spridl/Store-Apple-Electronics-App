@@ -11,7 +11,7 @@ struct Device {
     
     let name: String
     let price: Int
-    let descriptio: String
+    let description: String
     let image: String
     
     static func getIphone() -> [Device] {
@@ -34,7 +34,7 @@ struct Device {
             let device = Device(
                 name: iphones[index],
                 price: priceForIphones[index],
-                descriptio: descriptionOfIphones[index],
+                description: descriptionOfIphones[index],
                 image:iphoneImages[index]
             )
             devices.append(device)
@@ -62,7 +62,7 @@ struct Device {
             let device = Device(
                 name: ipads[index],
                 price: priceForIpads[index],
-                descriptio: descriptionOfIpads[index],
+                description: descriptionOfIpads[index],
                 image: ipadImages[index]
             )
             devices.append(device)
@@ -90,7 +90,7 @@ struct Device {
             let device = Device(
                 name: macBooks[index],
                 price: priceForMacBooks[index],
-                descriptio: descriptionOfMacBooks[index],
+                description: descriptionOfMacBooks[index],
                 image: macBookImages[index]
             )
             devices.append(device)

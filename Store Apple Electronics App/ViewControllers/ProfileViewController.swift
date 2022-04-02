@@ -11,23 +11,24 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     // MARK: - IB Outlets
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var birthdayButton: UIButton!
+    @IBOutlet weak var aboutUs: UIButton!
+    @IBOutlet weak var logOut: UIButton!
     
-    var fullName: String!
-//    var Person!
+    //MARK: - Properties
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullNameLabel.text = fullName
+        aboutUs.layer.cornerRadius = aboutUs.frame.height / 4
+        logOut.layer.cornerRadius = logOut.frame.height / 4
         
-//        profileImageView.image = UIImage(named: person.title)
-
-    }
-    
-    @IBAction func birthDayButtonPressed() {
+        profileImageView.image = UIImage(named: person.photo)
+        fullNameLabel.text = person.fullName
     }
 }
 
