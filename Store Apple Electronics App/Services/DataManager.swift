@@ -70,11 +70,11 @@ class DataManager {
     ]
     
     let macBookImages = [
-        "MacBook Pro (13 дюймов, 2020 г., четыре порта Thunderbolt 3)",
-        "MacBook Pro (13 дюймов, 2020 г., два порта Thunderbolt 3)",
-        "MacBook Pro (13 дюймов, M1, 2020 г.)",
-        "MacBook Pro (16 дюймов, 2021 г.)",
-        "MacBook Pro (14 дюймов, 2021 г.)",
+        "MacBook Pro (13 inch, 2020 г., четыре порта Thunderbolt 3)",
+        "MacBook Pro (13 inch, 2020 г., два порта Thunderbolt 3)",
+        "MacBook Pro (13 inch, M1, 2020 г.)",
+        "MacBook Pro (16 inch, 2021 г.)",
+        "MacBook Pro (14 inch, 2021 г.)",
     ]
     
     let descriptionOfIphones = [
