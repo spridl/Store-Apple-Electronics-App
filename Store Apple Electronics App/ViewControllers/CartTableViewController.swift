@@ -14,7 +14,15 @@ class CartTableViewController: UITableViewController {
     let cart = CartManager.shared
     var devices: [Device]!
     
-    //MARK: - IBActions
+    // MARK: - viewDidAppear
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationItemToggle()
+        tableView.reloadData()
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func buyButtonPressed(_ sender: UIBarButtonItem) {
         setBuyAlert()
@@ -51,6 +59,16 @@ class CartTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    // MARK: - private funcs
+    
+    private func navigationItemToggle() {
+        if cart.devices.isEmpty {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        } else {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        }
+    }
 
 }
 
@@ -67,11 +85,12 @@ extension CartTableViewController {
         
         let alert = UIAlertController(
             title: "Оформить доставку?",
-            message: "на сумму \(sum)",
+            message: "на сумму \(sum)$",
             preferredStyle: .alert)
         let actionYes = UIAlertAction(title: "Да", style: .default) {  _ in
             self.cart.devices = []
             self.doneAlert()
+            self.navigationItemToggle()
             self.tableView.reloadData()
         }
         let actionNo = UIAlertAction(title: "Нет", style: .default)
