@@ -47,7 +47,4 @@ class DetailViewController: UIViewController {
         buyButton.setTitle("В корзине", for: .normal)
         buyButton.isEnabled.toggle()
     }
-    
-    
-    
 }

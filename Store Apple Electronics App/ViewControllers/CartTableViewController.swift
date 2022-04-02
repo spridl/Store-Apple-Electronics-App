@@ -52,6 +52,7 @@ class CartTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             cart.devices.remove(at: indexPath.row)
+            navigationItemToggle()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -105,8 +106,8 @@ extension CartTableViewController {
     
     private func doneAlert() {
         let alert = UIAlertController(
-            title: "Поздравляем!!!",
-            message: "Ваш заказ ожидает вас в под дверью",
+            title: "Поздравляем!",
+            message: "Ваш заказ ожидает вас под дверью",
             preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default)
         alert.addAction(action)
