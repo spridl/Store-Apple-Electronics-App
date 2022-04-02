@@ -38,21 +38,33 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rli-qK-lKs">
                                         <rect key="frame" x="0.0" y="98" width="240" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Login"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mq-Tf-sQY"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Market" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-ab-oH8">
+                                <rect key="frame" x="40" y="56" width="240" height="49.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="41"/>
+                                <color key="textColor" red="0.32958817574166765" green="0.32958817574166765" blue="0.32958817574166765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cAU-ab-oH8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="1CJ-gy-klw"/>
                             <constraint firstItem="Qs5-eq-vVq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Atw-xZ-ITI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qs5-eq-vVq" secondAttribute="trailing" constant="40" id="KWR-2f-pcj"/>
                             <constraint firstItem="Qs5-eq-vVq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MyT-b2-Hpd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cAU-ab-oH8" secondAttribute="trailing" constant="40" id="a5P-RA-riH"/>
+                            <constraint firstItem="cAU-ab-oH8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="p5s-tP-3tB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -129,7 +141,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Подробнее &gt;"/>
+                                                                        <state key="normal" title="Подробнее &gt;">
+                                                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="i8X-TX-xxL"/>
                                                                         </connections>
@@ -201,7 +215,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Подробнее &gt;"/>
+                                                                        <state key="normal" title="Подробнее &gt;">
+                                                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="Mfh-HJ-HVj"/>
                                                                         </connections>
@@ -273,7 +289,9 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="Подробнее &gt;"/>
+                                                                        <state key="normal" title="Подробнее &gt;">
+                                                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="moreButtonPressed:" destination="ZlC-I2-fpf" eventType="touchUpInside" id="gdk-zL-s6y"/>
                                                                         </connections>
@@ -302,7 +320,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hnr-Qy-RHb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3pk-15-O4V" firstAttribute="top" secondItem="hnr-Qy-RHb" secondAttribute="top" constant="30" id="DGj-Tu-tdu"/>
                             <constraint firstItem="3pk-15-O4V" firstAttribute="leading" secondItem="hnr-Qy-RHb" secondAttribute="leading" constant="28" id="ZAB-VU-Exk"/>
@@ -332,7 +350,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fZD-Ym-1JK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceCell" id="UVT-xl-abi">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
@@ -341,6 +359,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <connections>
                                     <segue destination="DDu-B0-k9e" kind="show" identifier="" id="n37-ke-396"/>
                                 </connections>
@@ -563,7 +582,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H1O-RM-aqv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H1O-RM-aqv" firstAttribute="bottom" secondItem="MeN-sG-q70" secondAttribute="bottom" constant="14" id="Aof-uu-TWM"/>
                             <constraint firstItem="67E-wg-CGJ" firstAttribute="top" secondItem="H1O-RM-aqv" secondAttribute="top" constant="10" id="O0A-zo-xc4"/>
@@ -593,8 +612,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2JC-Iu-vIK">
-                                <rect key="frame" x="16" y="0.0" width="288" height="528"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="16" y="20" width="288" height="508"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="euW-rt-DIw">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -621,13 +640,14 @@
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFu-W2-usd">
                                                             <rect key="frame" x="0.0" y="171" width="150" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="lXP-vd-6Hk" secondAttribute="trailing" constant="25" id="GJ5-fa-0AN"/>
                                                 <constraint firstAttribute="bottom" secondItem="lXP-vd-6Hk" secondAttribute="bottom" constant="8.5" id="Jjt-CK-Eu0"/>
@@ -635,6 +655,7 @@
                                                 <constraint firstItem="lXP-vd-6Hk" firstAttribute="top" secondItem="eRv-jA-CmW" secondAttribute="top" id="n7j-nG-9fw"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <connections>
                                             <outlet property="imgCell" destination="FJp-l0-uqJ" id="cvH-bB-2Nu"/>
                                             <outlet property="lblCell" destination="wFu-W2-usd" id="2LG-ui-0rV"/>
@@ -648,10 +669,10 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iO6-Uk-PXD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iO6-Uk-PXD" firstAttribute="trailing" secondItem="2JC-Iu-vIK" secondAttribute="trailing" constant="16" id="8hE-fD-Rnd"/>
-                            <constraint firstItem="2JC-Iu-vIK" firstAttribute="top" secondItem="iO6-Uk-PXD" secondAttribute="top" id="H39-rN-8Hy"/>
+                            <constraint firstItem="2JC-Iu-vIK" firstAttribute="top" secondItem="iO6-Uk-PXD" secondAttribute="top" constant="20" id="H39-rN-8Hy"/>
                             <constraint firstItem="iO6-Uk-PXD" firstAttribute="bottom" secondItem="2JC-Iu-vIK" secondAttribute="bottom" constant="20" id="Oze-uL-HvV"/>
                             <constraint firstItem="2JC-Iu-vIK" firstAttribute="leading" secondItem="iO6-Uk-PXD" secondAttribute="leading" constant="16" id="U65-dm-2kZ"/>
                         </constraints>

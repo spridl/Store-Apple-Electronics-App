@@ -17,6 +17,13 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     
     var person: Person!
+    
+    //MARK: - viewDidLoad
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        setGradientLayer()
+    }
 
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,6 +68,19 @@ class LoginViewController: UIViewController {
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         nameTextField.text = ""
         surnameTextField.text = ""
+    }
+    
+    //MARK: - private funcs
+    
+    private func setGradientLayer() {
+        let startColor = #colorLiteral(red: 0.2569696605, green: 0.7552724481, blue: 0.9694721103, alpha: 1).cgColor
+        let endColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayer.frame = view.frame
+        gradientLayer.colors = [startColor, endColor]
     }
 }
 
