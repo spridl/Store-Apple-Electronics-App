@@ -68,6 +68,8 @@ class LoginViewController: UIViewController {
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         nameTextField.text = ""
         surnameTextField.text = ""
+        let cart = CartManager.shared
+        cart.devices = []
     }
     
     //MARK: - private funcs
