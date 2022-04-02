@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "mbp-spacegray-select-202011.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "6029fa06e16d4da2bc5915bd62ac34ec.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

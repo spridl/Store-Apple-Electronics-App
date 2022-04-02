@@ -294,59 +294,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание товара" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-1z-qxP">
-                                <rect key="frame" x="16" y="306" width="288" height="193"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание товара" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-1z-qxP">
+                                <rect key="frame" x="16" y="473" width="288" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="225" id="3eJ-uA-Mjl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hPQ-h7-0fE">
-                                <rect key="frame" x="60" y="54" width="200" height="236"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hPQ-h7-0fE">
+                                <rect key="frame" x="20" y="54" width="280" height="403"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJn-7V-gIf">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="106"/>
+                                        <rect key="frame" x="30" y="0.0" width="220" height="319"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="2E9-XO-IPw">
-                                        <rect key="frame" x="19.5" y="130" width="161.5" height="106"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2E9-XO-IPw">
+                                        <rect key="frame" x="82.5" y="343" width="115" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Название товара" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoK-Zw-O13">
-                                                <rect key="frame" x="0.0" y="0.0" width="161.5" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Название товара" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoK-Zw-O13">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKo-UF-bPZ">
-                                                <rect key="frame" x="56.5" y="38" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="41.5" y="42" width="32.5" height="18"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                 <color key="textColor" red="0.38304018090000003" green="0.38390341480000001" blue="0.39707624730000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-f6-dOr">
-                                                <rect key="frame" x="55.5" y="76" width="50" height="30"/>
-                                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Купить"/>
-                                                <connections>
-                                                    <action selector="buyButtonPressed:" destination="DDu-B0-k9e" eventType="touchUpInside" id="i2j-lh-bvP"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="106" id="a7q-Cm-EDK"/>
+                                            <constraint firstAttribute="height" constant="60" id="a7q-Cm-EDK"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-f6-dOr">
+                                <rect key="frame" x="80" y="489" width="160" height="20"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ASH-R3-47S"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Добавить в корзину">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonPressed:" destination="DDu-B0-k9e" eventType="touchUpInside" id="i2j-lh-bvP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hpf-z3-U3v"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hPQ-h7-0fE" firstAttribute="leading" secondItem="hpf-z3-U3v" secondAttribute="leading" constant="20" id="3fp-dC-jkC"/>
                             <constraint firstItem="9xx-1z-qxP" firstAttribute="leading" secondItem="hpf-z3-U3v" secondAttribute="leading" constant="16" id="67W-CN-kU5"/>
+                            <constraint firstItem="hpf-z3-U3v" firstAttribute="trailing" secondItem="k9J-f6-dOr" secondAttribute="trailing" constant="80" id="6cS-Xc-JMy"/>
                             <constraint firstItem="9xx-1z-qxP" firstAttribute="top" secondItem="hPQ-h7-0fE" secondAttribute="bottom" constant="16" id="Kdz-kX-O36"/>
+                            <constraint firstItem="k9J-f6-dOr" firstAttribute="leading" secondItem="hpf-z3-U3v" secondAttribute="leading" constant="80" id="KuG-fc-r0D"/>
                             <constraint firstItem="hPQ-h7-0fE" firstAttribute="top" secondItem="hpf-z3-U3v" secondAttribute="top" constant="10" id="W1Z-k8-3AW"/>
-                            <constraint firstItem="hpf-z3-U3v" firstAttribute="bottom" secondItem="9xx-1z-qxP" secondAttribute="bottom" constant="20" id="WJ9-pn-KFV"/>
-                            <constraint firstItem="hPQ-h7-0fE" firstAttribute="centerX" secondItem="eXP-LD-R4F" secondAttribute="centerX" id="gNX-zm-O6p"/>
+                            <constraint firstItem="hpf-z3-U3v" firstAttribute="bottom" secondItem="k9J-f6-dOr" secondAttribute="bottom" constant="10" id="jfc-wX-uYI"/>
+                            <constraint firstItem="k9J-f6-dOr" firstAttribute="top" secondItem="9xx-1z-qxP" secondAttribute="bottom" constant="10" id="mmQ-CE-Jd4"/>
                             <constraint firstItem="hpf-z3-U3v" firstAttribute="trailing" secondItem="9xx-1z-qxP" secondAttribute="trailing" constant="16" id="oNq-MH-rGg"/>
+                            <constraint firstItem="hpf-z3-U3v" firstAttribute="trailing" secondItem="hPQ-h7-0fE" secondAttribute="trailing" constant="20" id="u4a-w4-4Lh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nby-MC-4Dm"/>
@@ -627,6 +640,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

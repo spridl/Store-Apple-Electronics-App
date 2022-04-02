@@ -23,7 +23,7 @@ class DevicesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        let size = view.frame.height / 5
+        let size = view.frame.height / 10
         
         content.text = devices[indexPath.row].name
         content.secondaryText = "\(devices[indexPath.row].price)$"
@@ -33,9 +33,14 @@ class DevicesTableViewController: UITableViewController {
         content.imageProperties.maximumSize = CGSize(width: size, height: size)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
+        
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        view.frame.height / 8
     }
     
     // MARK: - Navigation

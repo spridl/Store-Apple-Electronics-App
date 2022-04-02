@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "Bildschirmfoto_2020-05-22_um_12.01.27.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "Bildschirmfoto_2020-05-22_um_12.01.27.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

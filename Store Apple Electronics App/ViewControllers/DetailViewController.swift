@@ -19,8 +19,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        detailImageView.image = UIImage(named: product.image)
+        deviceNameLabel.text = product.name
+        priceLabel.text = "\(product.price)$"
+        aboutDevice.text = product.description
+        buyButton.layer.cornerRadius = buyButton.frame.height / 4
     }
 
     @IBAction func buyButtonPressed(_ sender: Any) {

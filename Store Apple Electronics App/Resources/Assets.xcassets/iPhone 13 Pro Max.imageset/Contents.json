@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "iphone_13_PNG5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "orig.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

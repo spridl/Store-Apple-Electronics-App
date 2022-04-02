@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "ipad-pro-11-2020.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "csm_4_zu_3_ipad_pro_11_5bbf9f8f6e.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
