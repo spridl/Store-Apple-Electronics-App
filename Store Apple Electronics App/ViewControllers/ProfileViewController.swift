@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var birthdayButton: UIButton!
     @IBOutlet weak var aboutUs: UIButton!
     @IBOutlet weak var logOut: UIButton!
     
@@ -25,15 +24,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        birthdayButton.layer.cornerRadius = birthdayButton.frame.height / 4
         aboutUs.layer.cornerRadius = aboutUs.frame.height / 4
         logOut.layer.cornerRadius = logOut.frame.height / 4
         
         profileImageView.image = UIImage(named: person.photo)
         fullNameLabel.text = person.fullName
-    }
-    
-    @IBAction func birthDayButtonPressed() {
     }
 }
 

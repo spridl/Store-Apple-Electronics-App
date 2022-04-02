@@ -570,21 +570,6 @@
                                 <color key="textColor" red="0.20392158630000001" green="0.47058826679999999" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlb-r2-TBU">
-                                <rect key="frame" x="115" y="321" width="90" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="QAz-Tr-aqX"/>
-                                    <constraint firstAttribute="height" constant="30" id="lzm-jO-DYj"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Birthday">
-                                    <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="birthDayButtonPressed" destination="ynw-jt-Jwo" eventType="touchUpInside" id="ofP-jk-I1k"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H1O-RM-aqv"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
@@ -592,20 +577,17 @@
                             <constraint firstItem="H1O-RM-aqv" firstAttribute="bottom" secondItem="MeN-sG-q70" secondAttribute="bottom" constant="14" id="Aof-uu-TWM"/>
                             <constraint firstItem="1Mi-tG-yuX" firstAttribute="leading" secondItem="H1O-RM-aqv" secondAttribute="leading" constant="40" id="CZ5-1z-lVj"/>
                             <constraint firstItem="1vR-Xi-o7B" firstAttribute="centerY" secondItem="pSg-53-X69" secondAttribute="centerY" id="EWH-lm-hOj"/>
-                            <constraint firstItem="Xlb-r2-TBU" firstAttribute="centerX" secondItem="pSg-53-X69" secondAttribute="centerX" id="MTF-xG-Dlk"/>
                             <constraint firstItem="1vR-Xi-o7B" firstAttribute="top" secondItem="1Mi-tG-yuX" secondAttribute="bottom" constant="30" id="Mey-LI-55H"/>
                             <constraint firstItem="H1O-RM-aqv" firstAttribute="trailing" secondItem="1vR-Xi-o7B" secondAttribute="trailing" constant="40" id="Uq6-Nq-Brk"/>
                             <constraint firstItem="1Mi-tG-yuX" firstAttribute="top" secondItem="H1O-RM-aqv" secondAttribute="top" constant="34" id="Vu0-9x-atz"/>
                             <constraint firstItem="MeN-sG-q70" firstAttribute="centerX" secondItem="pSg-53-X69" secondAttribute="centerX" id="WEv-j9-gPs"/>
                             <constraint firstItem="H1O-RM-aqv" firstAttribute="trailing" secondItem="1Mi-tG-yuX" secondAttribute="trailing" constant="40" id="rn0-Vf-czs"/>
-                            <constraint firstItem="Xlb-r2-TBU" firstAttribute="top" secondItem="1vR-Xi-o7B" secondAttribute="bottom" constant="22" id="sSb-hQ-1x0"/>
                             <constraint firstItem="1vR-Xi-o7B" firstAttribute="leading" secondItem="H1O-RM-aqv" secondAttribute="leading" constant="40" id="zsv-56-oIK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Lo4-wf-bCr"/>
                     <connections>
                         <outlet property="aboutUs" destination="tT6-ga-Lwf" id="Pc8-Lc-BWg"/>
-                        <outlet property="birthdayButton" destination="Xlb-r2-TBU" id="R96-h7-Mdk"/>
                         <outlet property="fullNameLabel" destination="1vR-Xi-o7B" id="ZsD-N8-szI"/>
                         <outlet property="logOut" destination="WJN-qt-uO7" id="8mi-ZT-hKW"/>
                         <outlet property="profileImageView" destination="1Mi-tG-yuX" id="HNJ-qr-ZFp"/>
@@ -744,9 +726,6 @@
         <image name="tray.full" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
