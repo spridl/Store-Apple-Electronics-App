@@ -25,11 +25,17 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         detailImageView.image = UIImage(named: product.image)
         deviceNameLabel.text = product.name
         priceLabel.text = "\(product.price)$"
         aboutDevice.text = product.description
         buyButton.layer.cornerRadius = buyButton.frame.height / 4
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkCart()
     }
     
     //MARK: - IBActions
@@ -43,8 +49,20 @@ class DetailViewController: UIViewController {
         cart.devices.append(product)
         cartVC.devices = cart.devices
         
-        buyButton.backgroundColor = .gray
-        buyButton.setTitle("В корзине", for: .normal)
-        buyButton.isEnabled.toggle()
+        checkCart()
+    }
+    
+    private func checkCart() {
+        let cart  = CartManager.shared.devices
+        
+        if cart.contains(product) {
+            buyButton.backgroundColor = .gray
+            buyButton.setTitle("В корзине", for: .normal)
+            buyButton.isEnabled = false
+        } else {
+            buyButton.backgroundColor = .red
+            buyButton.setTitle("Добавить в корзину", for: .normal)
+            buyButton.isEnabled = true
+        }
     }
 }

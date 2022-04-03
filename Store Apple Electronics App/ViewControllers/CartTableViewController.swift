@@ -41,7 +41,7 @@ class CartTableViewController: UITableViewController {
         let size = view.frame.height / 10
         
         content.text = cart.devices[indexPath.row].name
-        content.secondaryText = "Стоимость \(cart.devices[indexPath.row].price)"
+        content.secondaryText = "Стоимость \(cart.devices[indexPath.row].price)$"
         content.image = UIImage(named: cart.devices[indexPath.row].image)
         content.imageProperties.maximumSize = CGSize(width: size, height: size)
         
