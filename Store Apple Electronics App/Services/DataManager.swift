@@ -15,7 +15,7 @@ class DataManager {
         "iPhone 12",
         "iPhone 12 Pro",
         "iPhone 12 Pro Max",
-        "iPhone 13 Pro",
+        "iPhone 13",
         "iPhone 13 Pro",
         "iPhone 13 Pro Max"
     ]
